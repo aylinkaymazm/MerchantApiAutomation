@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hepsiburadaApi" />
         <module name="ApiTest" />
-        <module name="hepsiburadaApi-main" />
+        <module name="merchant_api" />
       </profile>
     </annotationProcessing>
   </component>
