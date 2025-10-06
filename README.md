@@ -1,65 +1,59 @@
-MerchantApiAutomation
-1. Proje Amacı ve Kapsam
+# 🚀 Merchant API Automation  
 
-MerchantApiAutomation, muhtemelen merchant (satıcı) API’lerini test etmek / otomatikleştirmek için yazılmış bir test otomasyon çatısıdır.
+![Java](https://img.shields.io/badge/Java-17-blue?logo=java)  
+![Maven](https://img.shields.io/badge/Maven-Build-orange?logo=apache-maven)  
+![Tests](https://img.shields.io/badge/Tests-Automated-green?logo=testing-library)  
+![Status](https://img.shields.io/badge/Status-Active-success?style=flat)
 
-API uç noktalarına istekler atar
+---
 
-Yanıtlara karşı doğrulamalar yapar
+## 📖 Hakkında  
+**MerchantApiAutomation**, satıcı (merchant) API’lerini test etmek için hazırlanmış bir **otomasyon projesidir**.  
+Amaç:  
+- 🔎 API uç noktalarını otomatik test etmek  
+- ✅ Doğrulama (assertion) işlemlerini güvenilir şekilde yapmak  
+- 🔄 CI/CD süreçlerine kolayca entegre etmek  
 
-Sürekli entegrasyon / teslim süreçlerine entegre edilebilir
+---
 
-Bu tür projeler, manuel test yükünü azaltır, regresyon hatalarını yakalar ve API’lerin stabil çalışmasını sağlar.
+## 🛠️ Kullanılan Teknolojiler  
+- ☕ **Java 17**  
+- 🐘 **Maven** (bağımlılık yönetimi & build)  
+- 📬 **REST Assured** (REST API testleri)  
+- 🧪 **JUnit / TestNG** (test framework)  
+- 📊 **Surefire Reports** (raporlama)
 
-2. Proje Yapısı / Dosya Organizasyonu
+---
 
-Depo içeriği şu şekilde:
-
+## 📂 Proje Yapısı  
 MerchantApiAutomation/
 │
-├── .idea/                   — IDE (IntelliJ / IDE konfigürasyon) klasörü  
-├── src/                     — Kaynak kod klasörü  
-│   ├── … (Java test sınıfları vs.)  
+├── src/ → Test senaryoları (Java sınıfları)
+│ ├── test/java/... → API testleri
 │
-├── pom.xml                  — Maven proje yapılandırması  
-└── .gitignore                — Git yoksayma ayarları  
+├── pom.xml → Maven bağımlılık yönetimi
+└── README.md → Proje dokümantasyonu
 
+yaml
+Copy code
 
-pom.xml: Projenin bağımlılıklarını, build ayarlarını, plugin’leri tanımlar (JUnit, RestAssured vs).
+---
 
-src/: Test kodları ve API çağrılarını içeren sınıflar.
+## ⚙️ Kurulum & Çalıştırma  
 
-3. Kullanılan Teknolojiler / Araçlar
-
-Projeye dair dosyaların uzantıları ve yapıdan çıkarımlar:
-
-Java dili (%.java uzantıları)
-
-Maven proje yönetimi (pom.xml)
-
-Muhtemelen RestAssured veya benzeri REST client + test framework
-
-Test senaryoları / doğrulamalar (assertion)
-
-4. Nasıl Çalıştırılır / Kullanımı
-
-Aşağıdaki adımları izleyerek projeyi çalıştırabilirsin:
-
-Projeyi bilgisayarına klonla:
-
+### 1️⃣ Repoyu Klonla  
+```bash
 git clone https://github.com/aylinkaymazm/MerchantApiAutomation.git
-
-
-Maven ile bağımlılıkları indir:
-
+cd MerchantApiAutomation
+2️⃣ Bağımlılıkları Yükle
+bash
+Copy code
 mvn clean install
-
-
-Testleri çalıştır:
-
+3️⃣ Testleri Çalıştır
+bash
+Copy code
 mvn test
+4️⃣ Raporları İncele
+Maven Surefire raporları target/surefire-reports/ altında oluşur.
 
-
-Çıkan raporları kontrol et. (Maven Surefire raporları, HTML / XML formatlı olabilir)
-
-Eğer API tabanlı environment’lar varsa (örneğin: base URL, token), bunları application.properties veya env dosyası ile ayarlaman gerekebilir.
+Gelişmiş raporlama için Allure veya ExtentReports eklenebilir.
